@@ -1,0 +1,54 @@
+/* line 3, ../sass/component.scss */
+.count-down {
+  left: 0;
+  position: relative;
+  font-size: 6vw;
+  text-align: center;
+}
+
+/* line 10, ../sass/component.scss */
+#clockdiv {
+  font-family: sans-serif;
+  color: #333;
+  text-align: center;
+  font-size: 6vw;
+}
+
+/* line 18, ../sass/component.scss */
+#clockdiv > div {
+  padding: 10px;
+  display: inline-block;
+  width: 23%;
+}
+
+/* line 24, ../sass/component.scss */
+#clockdiv div > span {
+  padding: 15px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* line 30, ../sass/component.scss */
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 36, ../sass/component.scss */
+  #clockdiv > div:last-of-type {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 43, ../sass/component.scss */
+  .header_title h1 {
+    font-size: 3em;
+  }
+  /* line 46, ../sass/component.scss */
+  .header_title h2 {
+    font-size: 2em;
+  }
+}
+
+/*# sourceMappingURL=component.css.map */

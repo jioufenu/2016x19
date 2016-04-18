@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2016年 x19全球華文詩獎</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css.map">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.easings.min.js"></script>
+    <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- /bootstrap -->
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            scrollOverflow: true
+        });
+
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var daysSpan = clock.querySelector('.days');
+            var hoursSpan = clock.querySelector('.hours');
+            var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+            var schedule = [
+                ['Jul 25 2015', 'Sept 20 2015'],
+                ['Sept 21 2015', 'Jul 25 2016'],
+                ['Jul 25 2016', 'Jul 25 2030']
+            ];
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(2016, 7, 11); //2016/8/10--24:00
+        initializeClock('clockdiv', deadline);
+
+
+        
+
+    });
+    </script>
+</head>
+
+<body>
+    <main id="fullpage">
+        <section class="section sec_header">
+            <div class="container">
+                <div class="header_title">
+                    <h1>2016年 x19全球華文詩獎</h1>
+                    <h2 class="count-down">截稿倒數</h2>
+                </div>
+                <div id="clockdiv">
+                    <div>
+                        <span class="days"></span>
+                        <div class="smalltext">Days</div>
+                    </div>
+                    <div>
+                        <span class="hours"></span>
+                        <div class="smalltext">Hours</div>
+                    </div>
+                    <div>
+                        <span class="minutes"></span>
+                        <div class="smalltext">Minutes</div>
+                    </div>
+                    <div>
+                        <span class="seconds"></span>
+                        <div class="smalltext">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section sec_rules">
+            <div class="container">
+                <h2 class="rules_title">徵稿辦法</h2>
+                <figure>
+                    <h3>一、宗旨</h3>
+                    <p>X19全球華文詩獎，是一個針對未滿19歲年輕詩人舉辦的文學獎。我們深信青春的無限可能，也期許能見證詩壇超新星的誕生。</p>
+                    <h3>二、參賽資格</h3>
+                    <ul>
+                        <li>（一）未滿19歲的創作者。（1997年1月1日以後出生者）</li>
+                        <li>（二）投稿作品不得抄襲，不鼓勵模仿，並且必須未曾在任何詩刊、報紙、雜誌等平面媒體發表（網路發表不在此限）。</li>
+                        <li>（三）未曾獲得X19全球華文詩獎。</li>
+                    </ul>
+                    <h3>三、徵獎辦法</h3>
+                    <ul>
+                        <li>（一）華文現代詩，繁簡體不限。以完整呈現為原則，形式不拘，題材不限。 （二）作品三首以上，八首以下（含）。</li>
+                        <li>（三）請將所有作品存在一個文檔內（以Microsoft Office Word存檔，副檔名.doc或.docx），第一頁羅列作品題名，接下來的作品依序排列。作品文字請直式橫書，標題14號字置中，內文12號字靠左。</li>
+                        <li>（四）請下載並填寫報名表，並附上國家證明出生年月日文件的掃描檔。</li>
+                        <li>（五）一律以電子郵件投稿。作品與報名表請分存成兩個文檔，以附檔方式寄至投稿信箱「<a href="mailto:JioufenU@gmail.com" target="_blank">JioufenU@gmail.com</a>」，主旨註明「（姓名）參加2016年X19全球華文詩獎」。</li>
+                    </ul>
+                    <p>
+                        報名表下載：<a href="https://goo.gl/p8g7ew" target="_blank">https://goo.gl/p8g7ew</a> 。</p>
+                    <h3>四、徵稿日期</h3>
+                    <p>即日起至2016年8月10日24:00。以來稿時間為準，逾期不候。</p>
+                    <h3>五、評審</h3>
+                    <p>包含青年詩人以及歷屆X19詩獎得主。分為初審、決審兩階段，將舉辦公開的決審審會議。</p>
+                    <h3>六、評選結果公布</h3>
+                    <p>得獎名單將於九月中旬公佈在「輕痰萬事屋」臉書粉絲專頁。</p>
+                    <h3>七、獎項</h3>
+                    <ul>
+                        <li>首獎一名／新台幣壹萬元整。</li>
+                        <li>優選兩名／新台幣壹仟元整。</li>
+                    </ul>
+                    <p>
+                        獎項與獎金得隨評審意見調整。得獎者必須繳交「得獎感言」及相關資料。
+                    </p>
+                    <h3>八、著作權</h3>
+                    <p>得獎作品著作權歸作者所有，但主辦單位得以任何形式推廣、保存及轉載，不另付稿酬或版稅。</p>
+                    <h3>九、注意事項</h3>
+                    <p>參加徵選作品如有下列之情事者取消其參加徵選資格，若已獲獎則追回獎金及獎座、獎狀，同時應負必要之法律責任： </p>
+                    <ul>
+                        <li>（一）抄襲他人作品或冒名頂替參加徵選者。</li>
+                        <li>（二）違反著作權法或其他法律規定者。</li>
+                        <li>（三）作品曾公開發表於平面媒體或參與其他徵選獲獎者。</li>
+                    </ul>
+                    <h3>十、備註</h3>
+                    <p>任何特異、委屈、情非得已，請來信告知。對於上述各項目，主辦單位保留更動權力。</p>
+                </figure>
+            </div>
+        </section>
+        
+        <section class="section sec_host">
+            <div class="container">
+                <figure class="host_desc">
+                    <figcaption>輕痰萬事屋</figcaption>
+                    <figure>
+                        <figcaption>總召集人</figcaption>
+                        <p>陳柏言</p>
+                    </figure>
+                    <figure>
+                        <figcaption>執行委員
+                            <br><span style="font-size: 0.6em;display: inline-block;transform: translateY(-10px);">（按姓氏筆畫排列）</span></figcaption>
+                        <p>阿J 　洪啟軒　 楊浩偉　 楊書愷　 郭申睿
+                            <br> 楚然　 熊一蘋　 劉羽軒　 鄒適齊</p>
+                    </figure>
+                    <figure>官方網站 | <a href="http://jioufenn.net46.net/" target="_blank">http://jioufenn.net46.net/</a></figure>
+                    <figure>粉絲專頁 | <a href="https://www.facebook.com/JiouFenn/" target="_blank">https://www.facebook.com/JiouFenn/</a></figure>
+                </figure>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

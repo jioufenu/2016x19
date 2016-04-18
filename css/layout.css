@@ -1,0 +1,128 @@
+/* line 2, ../sass/layout.scss */
+.sec_header .container {
+  padding: 0 20px 50px;
+}
+/* line 5, ../sass/layout.scss */
+.sec_header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  background: url("../img/gravel-01.png");
+  background-repeat: round;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+
+/* line 20, ../sass/layout.scss */
+.rules_title {
+  position: relative;
+  left: 0;
+}
+
+/* line 26, ../sass/layout.scss */
+.sec_rules:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  background: url("../img/gravel-02.png");
+  background-repeat: round;
+  z-index: -1;
+}
+/* line 38, ../sass/layout.scss */
+.sec_rules figure {
+  padding: 0 0 100px;
+}
+/* line 40, ../sass/layout.scss */
+.sec_rules figure h3 {
+  margin: 30px 0 10px;
+}
+
+/* line 46, ../sass/layout.scss */
+.sec_host {
+  opacity: 0.8;
+  background: #555;
+  color: #eee;
+}
+/* line 50, ../sass/layout.scss */
+.sec_host:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  background: url("../img/gravel-01.png");
+  background-repeat: round;
+  z-index: -1;
+}
+
+/* line 64, ../sass/layout.scss */
+figure.host_desc {
+  text-align: center;
+}
+/* line 66, ../sass/layout.scss */
+figure.host_desc > figcaption {
+  font-size: 10vw;
+}
+/* line 69, ../sass/layout.scss */
+figure.host_desc figure {
+  margin: 30px auto;
+}
+/* line 71, ../sass/layout.scss */
+figure.host_desc figure:nth-last-of-type(2) {
+  margin: 40px auto 10px;
+}
+/* line 74, ../sass/layout.scss */
+figure.host_desc figure:last-of-type {
+  margin: 10px auto 40px;
+}
+/* line 77, ../sass/layout.scss */
+figure.host_desc figure figcaption {
+  font-size: 5vw;
+  color: #aaa;
+}
+/* line 81, ../sass/layout.scss */
+figure.host_desc figure p {
+  font-size: 4vw;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 88, ../sass/layout.scss */
+  .rules_title {
+    position: absolute;
+    left: 5%;
+  }
+
+  /* line 92, ../sass/layout.scss */
+  .sec_rules figure {
+    background: #555;
+    color: #eee;
+    margin-left: 30%;
+    padding: 10px 40px 100px;
+    box-shadow: 2px 0 5px #000;
+  }
+
+  /* line 100, ../sass/layout.scss */
+  figure.host_desc > figcaption {
+    font-size: 3em;
+  }
+  /* line 104, ../sass/layout.scss */
+  figure.host_desc figure figcaption {
+    font-size: 1.2em;
+  }
+  /* line 107, ../sass/layout.scss */
+  figure.host_desc figure p {
+    font-size: 1.6em;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */

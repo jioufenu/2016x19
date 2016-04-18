@@ -1,0 +1,50 @@
+.header_title {}
+
+.count-down {
+    left: 0;
+    position: relative;
+    font-size: 6vw;
+    text-align: center;
+}
+
+#clockdiv {
+    font-family: sans-serif;
+    color: #333;
+    text-align: center;
+    font-size: 6vw;
+}
+
+// clock
+#clockdiv > div {
+    padding: 10px;
+    display: inline-block;
+    width: 23%;
+}
+
+#clockdiv div > span {
+    padding: 15px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.smalltext {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+    #clockdiv >div:last-of-type {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header_title {
+        h1 {
+            font-size: 3em;
+        }
+        h2 {
+            font-size: 2em;
+        }
+    }
+}
