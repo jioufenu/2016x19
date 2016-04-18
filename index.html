@@ -24,6 +24,10 @@
             scrollOverflow: true
         });
 
+
+
+        // count_down by http://codepen.io/SitePoint/pen/MwNPVq
+        // http://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
         function getTimeRemaining(endtime) {
             var t = Date.parse(endtime) - Date.parse(new Date());
             var seconds = Math.floor((t / 1000) % 60);
@@ -68,11 +72,16 @@
             var timeinterval = setInterval(updateClock, 1000);
         }
 
+        // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
         var deadline = new Date(2016, 7, 11); //2016/8/10--24:00
         initializeClock('clockdiv', deadline);
 
 
-        
+        // awards_ajax
+        // $(".sec_award a").click(function(event) {
+        //     event.preventDefault();
+        //     $(".award_content").load($(this).prop("href"));
+        // });
 
     });
     </script>
@@ -155,7 +164,27 @@
                 </figure>
             </div>
         </section>
-        
+        <section class="section sec_award">
+            <h2>第一屆得獎作品</h2>
+            <figure><a data-toggle="modal" data-target="#ajax_award-content" href="awards/01_li-guan-wei.html">評審獎：李冠緯</a></figure>
+            <figure><a href="awards/02_xu-xuan-ni.html">評審獎：許玄妮</a></figure>
+            <figure><a href="awards/03_xiao-chun.html">入選獎：小春</a></figure>
+            <figure><a href="awards/04_hong-wan-da.html">入選獎：洪萬達</a></figure>
+            <figure><a href="awards/05_zheng-wan-rong.html">入選獎：鄭琬融</a></figure>
+            <!-- <div class="modal fade" id="ajax_award-content" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="width:100vw;">
+                <div class="modal-dialog" style="min-width: 65%;max-width:1000px;">
+                    <div class="modal-content"></div>
+                    
+                </div> -->
+                
+            </div>
+        </section>
+        <!-- <section class="section sec_about-us">
+            <div class="slide"> Slide 1 </div>
+            <div class="slide"> Slide 2 </div>
+            <div class="slide"> Slide 3 </div>
+            <div class="slide"> Slide 4 </div>
+        </section> -->
         <section class="section sec_host">
             <div class="container">
                 <figure class="host_desc">
