@@ -32,6 +32,18 @@
     font-size: 16px;
 }
 
+//
+.award-title {
+    margin-top: 2em;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.award-content {
+    padding: 1em;
+}
+
 @media screen and (max-width: 480px) {
     #clockdiv >div:last-of-type {
         display: none;

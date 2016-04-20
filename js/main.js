@@ -56,21 +56,14 @@ $(document).ready(function() {
 
     // awards
     // http://ashleydw.github.io/lightbox/
-    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    $('*[data-toggle="lightbox"]').on('click', function(event) {
         event.preventDefault();
-        $(this).ekkoLightbox();
-        // $(this).ekkoLightbox.onShow($.fn.fullpage.setAllowScrolling(false));
-        // $(this).ekkoLightbox.onHidden($.fn.fullpage.setAllowScrolling(true));
-
-        if ($(".ekko-lightbox")) {
+        $(this).ekkoLightbox({
+            onShow: function() { $.fn.fullpage.setAllowScrolling(false) },
+            onHidden: function() { $.fn.fullpage.setAllowScrolling(true) },
             // $.fn.fullpage.setMouseWheelScrolling(false);
-            $.fn.fullpage.setAllowScrolling(false);
-
-        }
+        });
 
     });
-    // $(document).delegate($(".ekko-lightbox"), 'click', function() {
-    //     $.fn.fullpage.setAllowScrolling(true);
-    // });
 
 });

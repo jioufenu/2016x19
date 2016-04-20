@@ -34,18 +34,32 @@
   font-size: 16px;
 }
 
+/* line 36, ../sass/component.scss */
+.award-title {
+  margin-top: 2em;
+}
+/* line 38, ../sass/component.scss */
+.award-title:first-child {
+  margin-top: 0;
+}
+
+/* line 43, ../sass/component.scss */
+.award-content {
+  padding: 1em;
+}
+
 @media screen and (max-width: 480px) {
-  /* line 36, ../sass/component.scss */
+  /* line 48, ../sass/component.scss */
   #clockdiv > div:last-of-type {
     display: none;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 43, ../sass/component.scss */
+  /* line 55, ../sass/component.scss */
   .header_title h1 {
     font-size: 3em;
   }
-  /* line 46, ../sass/component.scss */
+  /* line 58, ../sass/component.scss */
   .header_title h2 {
     font-size: 2em;
   }
