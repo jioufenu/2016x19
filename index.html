@@ -23,6 +23,64 @@
     <!-- /bootstrap/lightbox_plugin -->
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            scrollOverflow: true
+        });
+
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var daysSpan = clock.querySelector('.days');
+            var hoursSpan = clock.querySelector('.hours');
+            var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+            var schedule = [
+                ['Jul 25 2015', 'Sept 20 2015'],
+                ['Sept 21 2015', 'Jul 25 2016'],
+                ['Jul 25 2016', 'Jul 25 2030']
+            ];
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(2016, 7, 11); //2016/8/10--24:00
+        initializeClock('clockdiv', deadline);
+
+
+
+
+    });
+    </script>
 </head>
 
 <body>
@@ -67,7 +125,8 @@
                     </ul>
                     <h3>三、徵獎辦法</h3>
                     <ul>
-                        <li>（一）華文現代詩，繁簡體不限。以完整呈現為原則，形式不拘，題材不限。 （二）作品三首以上，八首以下（含）。</li>
+                        <li>（一）華文現代詩，繁簡體不限。以完整呈現為原則，形式不拘，題材不限。 </li>
+                        <li>（二）作品三首以上，八首以下（含）。</li>
                         <li>（三）請將所有作品存在一個文檔內（以Microsoft Office Word存檔，副檔名.doc或.docx），第一頁羅列作品題名，接下來的作品依序排列。作品文字請直式橫書，標題14號字置中，內文12號字靠左。</li>
                         <li>（四）請下載並填寫報名表，並附上國家證明出生年月日文件的掃描檔。</li>
                         <li>（五）一律以電子郵件投稿。作品與報名表請分存成兩個文檔，以附檔方式寄至投稿信箱「<a href="mailto:JioufenU@gmail.com" target="_blank">JioufenU@gmail.com</a>」，主旨註明「（姓名）參加2016年X19全球華文詩獎」。</li>
