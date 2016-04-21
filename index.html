@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css.map">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.easings.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.easings.min.js"></script> -->
     <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
@@ -17,65 +17,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- /bootstrap -->
+    <!-- bootstrap/lightbox_plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js" async></script>
+    <!-- /bootstrap/lightbox_plugin -->
     <link rel="stylesheet" href="css/main.css">
-    <script>
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-            scrollOverflow: true
-        });
-
-        function getTimeRemaining(endtime) {
-            var t = Date.parse(endtime) - Date.parse(new Date());
-            var seconds = Math.floor((t / 1000) % 60);
-            var minutes = Math.floor((t / 1000 / 60) % 60);
-            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-            var days = Math.floor(t / (1000 * 60 * 60 * 24));
-            return {
-                'total': t,
-                'days': days,
-                'hours': hours,
-                'minutes': minutes,
-                'seconds': seconds
-            };
-        }
-
-        function initializeClock(id, endtime) {
-            var clock = document.getElementById(id);
-            var daysSpan = clock.querySelector('.days');
-            var hoursSpan = clock.querySelector('.hours');
-            var minutesSpan = clock.querySelector('.minutes');
-            var secondsSpan = clock.querySelector('.seconds');
-            var schedule = [
-                ['Jul 25 2015', 'Sept 20 2015'],
-                ['Sept 21 2015', 'Jul 25 2016'],
-                ['Jul 25 2016', 'Jul 25 2030']
-            ];
-
-            function updateClock() {
-                var t = getTimeRemaining(endtime);
-
-                daysSpan.innerHTML = t.days;
-                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-                if (t.total <= 0) {
-                    clearInterval(timeinterval);
-                }
-            }
-
-            updateClock();
-            var timeinterval = setInterval(updateClock, 1000);
-        }
-
-        var deadline = new Date(2016, 7, 11); //2016/8/10--24:00
-        initializeClock('clockdiv', deadline);
-
-
-
-
-    });
-    </script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -154,6 +101,21 @@
                     <h3>十、備註</h3>
                     <p>任何特異、委屈、情非得已，請來信告知。對於上述各項目，主辦單位保留更動權力。</p>
                 </figure>
+            </div>
+        </section>
+        <section class="section sec_award">
+            <div class="container">
+                <h2 class="award_link">第一屆得獎作品</h2>
+                <figure>
+                    <a data-toggle="lightbox" data-title="評審獎：李冠緯" href="awards/01_li-guan-wei.html"><h3>評審獎：李冠緯</h3></a>
+                    <br>
+                    <a data-toggle="lightbox" data-title="評審獎：許玄妮" href="awards/02_xu-xuan-ni.html"><h3>評審獎：許玄妮</h3></a>
+                    <br>
+                    <a data-toggle="lightbox" data-title="入選獎：小春" href="awards/03_xiao-chun.html"><h3>入選獎：小春</h3></a>
+                    <br>
+                    <a data-toggle="lightbox" data-title="入選獎：洪萬達" href="awards/04_hong-wan-da.html"><h3>入選獎：洪萬達</h3></a>
+                    <br>
+                    <a data-toggle="lightbox" data-title="入選獎：鄭琬融" href="awards/05_zheng-wan-rong.html"><h3>入選獎：鄭琬融</h3></a></figure>
             </div>
         </section>
         <section class="section sec_host">
