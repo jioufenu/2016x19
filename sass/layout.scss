@@ -17,7 +17,8 @@
     }
 }
 
-.rules_title {
+.rules_title,
+.award_link {
     position: relative;
     left: 0;
 }
@@ -39,6 +40,35 @@
         padding: 0 0 100px;
         h3 {
             margin: 30px 0 10px;
+        }
+    }
+}
+
+.sec_award {
+    .award_link{
+        font-size: 2.6em;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+        width: 100%;
+        height: 100%;
+        background: url("../img/gravel-02.png");
+        background-repeat: round;
+        z-index: -1;
+        transform: scaleX(-1);
+    }
+    figure {
+        padding: 0 0 40%;
+        a {
+            display: inline-block;
+            margin-bottom: 1em;
+            h3 {
+                margin: 30px 0 0;
+            }
         }
     }
 }
@@ -85,9 +115,14 @@ figure.host_desc {
 }
 
 @media screen and (min-width: 768px) {
-    .rules_title {
+    .rules_title,
+    .award_link {
+
         position: absolute;
         left: 5%;
+    }
+    .sec_award .award_link{
+        font-size: 3em;
     }
     .sec_rules figure {
         background: #555;
@@ -95,6 +130,10 @@ figure.host_desc {
         margin-left: 30%;
         padding: 10px 40px 100px;
         box-shadow: 2px 0 5px #000;
+    }
+    .sec_award figure{
+        margin-left: 40%;
+        padding: 10px 40px 100px;
     }
     figure.host_desc {
         &>figcaption {
