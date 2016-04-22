@@ -3,6 +3,12 @@
     outline: none !important;
 }
 
+::selection{
+    background: transparent;
+    color: #FFDB71;
+    text-shadow: 1px 1px 1px #000;
+}
+
 body {
     font: 400 16px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
     background: #eee;
