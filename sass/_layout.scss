@@ -1,19 +1,34 @@
+$bg-img-url:( sec_header: "../img/gravel-01.png", sec_rules:"../img/gravel-02.png", sec_award:"../img/gravel-02.png", sec_host:"../img/gravel-01.png");
+%bg-img-style {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+}
+
+@each $name,
+$value in $bg-img-url {
+    .#{$name}:after {
+        background-image: url($value);
+        @extend %bg-img-style;
+    }
+}
+
+@each $reverse in sec_header,
+sec_award {
+    .#{$reverse}:after {
+        transform: scaleX(-1);
+    }
+}
+
 .sec_header {
     .container {
         padding: 0 20px 50px;
-    }
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.3;
-        width: 100%;
-        height: 100%;
-        background: url("../img/gravel-01.png");
-        background-size: cover;
-        z-index: -1;
-        transform: scaleX(-1);
     }
 }
 
@@ -24,18 +39,6 @@
 }
 
 .sec_rules {
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.3;
-        width: 100%;
-        height: 100%;
-        background: url("../img/gravel-02.png");
-        background-size: cover;
-        z-index: -1;
-    }
     figure {
         padding: 0 0 100px;
         h3 {
@@ -47,19 +50,6 @@
 .sec_award {
     .award_link {
         font-size: 2.6em;
-    }
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.3;
-        width: 100%;
-        height: 100%;
-        background: url("../img/gravel-02.png");
-        background-size: cover;
-        z-index: -1;
-        transform: scaleX(-1);
     }
     figure {
         display: -webkit-box;
@@ -91,18 +81,6 @@
     opacity: 0.8;
     background: #555;
     color: #eee;
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.3;
-        width: 100%;
-        height: 100%;
-        background: url("../img/gravel-01.png");
-        background-size: cover;
-        z-index: -1;
-    }
 }
 
 figure.host_desc {
