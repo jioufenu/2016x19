@@ -7,76 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css.map">
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.easings.min.js"></script> -->
-    <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
-    <!-- bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <!-- /bootstrap -->
     <!-- bootstrap/lightbox_plugin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js" async></script>
-    <!-- /bootstrap/lightbox_plugin -->
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-            scrollOverflow: true
-        });
-
-        function getTimeRemaining(endtime) {
-            var t = Date.parse(endtime) - Date.parse(new Date());
-            var seconds = Math.floor((t / 1000) % 60);
-            var minutes = Math.floor((t / 1000 / 60) % 60);
-            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-            var days = Math.floor(t / (1000 * 60 * 60 * 24));
-            return {
-                'total': t,
-                'days': days,
-                'hours': hours,
-                'minutes': minutes,
-                'seconds': seconds
-            };
-        }
-
-        function initializeClock(id, endtime) {
-            var clock = document.getElementById(id);
-            var daysSpan = clock.querySelector('.days');
-            var hoursSpan = clock.querySelector('.hours');
-            var minutesSpan = clock.querySelector('.minutes');
-            var secondsSpan = clock.querySelector('.seconds');
-            var schedule = [
-                ['Jul 25 2015', 'Sept 20 2015'],
-                ['Sept 21 2015', 'Jul 25 2016'],
-                ['Jul 25 2016', 'Jul 25 2030']
-            ];
-
-            function updateClock() {
-                var t = getTimeRemaining(endtime);
-
-                daysSpan.innerHTML = t.days;
-                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-                if (t.total <= 0) {
-                    clearInterval(timeinterval);
-                }
-            }
-
-            updateClock();
-            var timeinterval = setInterval(updateClock, 1000);
-        }
-
-        var deadline = new Date(2016, 7, 11); //2016/8/10--24:00
-        initializeClock('clockdiv', deadline);
-    });
-    </script>
 </head>
 
 <body>
@@ -125,10 +59,10 @@
                         <li>（二）作品三首以上，八首以下（含）。</li>
                         <li>（三）請將所有作品存在一個文檔內（以Microsoft Office Word存檔，副檔名.doc或.docx），第一頁羅列作品題名，接下來的作品依序排列。作品文字請直式橫書，標題14號字置中，內文12號字靠左。</li>
                         <li>（四）請下載並填寫報名表，並附上國家證明出生年月日文件的掃描檔。</li>
-                        <li>（五）一律以電子郵件投稿。作品與報名表請分存成兩個文檔，以附檔方式寄至投稿信箱「<a href="mailto:JioufenU@gmail.com" target="_blank">JioufenU@gmail.com</a>」，主旨註明「（姓名）參加2016年X19全球華文詩獎」。</li>
+                        <li>（五）一律以電子郵件投稿。作品與報名表請分存成兩個文檔，以附檔方式寄至投稿信箱「<a href="mailto:JioufenU@gmail.com" target="_blank" rel="noopener">JioufenU@gmail.com</a>」，主旨註明「（姓名）參加2016年X19全球華文詩獎」。</li>
                     </ul>
                     <p>
-                        報名表下載：<a href="https://goo.gl/p8g7ew" target="_blank">https://goo.gl/p8g7ew</a> 。</p>
+                        報名表下載：<a href="https://goo.gl/p8g7ew" target="_blank" rel="noopener">https://goo.gl/p8g7ew</a> 。</p>
                     <h3>四、徵稿日期</h3>
                     <p>即日起至2016年8月10日24:00。以來稿時間為準，逾期不候。</p>
                     <h3>五、評審</h3>
@@ -187,12 +121,18 @@
                         <p>阿J 　洪啟軒　 楊浩偉　 楊書愷　 郭申睿
                             <br> 楚然　 熊一蘋　 劉羽軒　 鄒適齊</p>
                     </figure>
-                    <figure>官方網站 | <a href="http://jioufenn.net46.net/" target="_blank">http://jioufenn.net46.net/</a></figure>
-                    <figure>粉絲專頁 | <a href="https://www.facebook.com/JiouFenn/" target="_blank">https://www.facebook.com/JiouFenn/</a></figure>
+                    <figure>官方網站 | <a href="http://jioufenn.net46.net/" target="_blank" rel="noopener">http://jioufenn.net46.net/</a></figure>
+                    <figure>粉絲專頁 | <a href="https://www.facebook.com/JiouFenn/" target="_blank" rel="noopener">https://www.facebook.com/JiouFenn/</a></figure>
                 </figure>
             </div>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js" async></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
