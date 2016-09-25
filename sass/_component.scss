@@ -44,6 +44,19 @@
     padding: 1em;
 }
 
+.winner-content {
+    padding: 0.6em;
+}
+
+.winner-title {
+    padding: 0.6em;
+    margin-top: 2em;
+    font-weight: bold;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
 @media screen and (max-width: 480px) {
     #clockdiv >div:last-of-type {
         display: none;

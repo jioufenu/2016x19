@@ -1,4 +1,4 @@
-$bg-img-url:( sec_header: "../img/gravel-01.png", sec_rules:"../img/gravel-02.png", sec_award:"../img/gravel-02.png", sec_host:"../img/gravel-01.png");
+$bg-img-url:( sec_header: "../img/gravel-01.png", sec_winner:"../img/gravel-02.png", sec_rules:"../img/gravel-02.png", sec_award:"../img/gravel-02.png", sec_host:"../img/gravel-01.png");
 %bg-img-style {
     content: "";
     position: absolute;
@@ -33,7 +33,8 @@ sec_award {
 }
 
 .rules_title,
-.award_link {
+.award_link,
+.winner_link {
     position: relative;
     left: 0;
 }
@@ -47,7 +48,8 @@ sec_award {
     }
 }
 
-.sec_award {
+.sec_award,
+.sec_winner {
     .award_link {
         font-size: 2.6em;
     }
@@ -79,8 +81,8 @@ sec_award {
 
 .sec_host {
     opacity: 0.8;
-    background: #555;
-    color: #eee;
+    background: $color-sec_host--bg;
+    color: $color-sec_host;
 }
 
 figure.host_desc {
@@ -98,7 +100,7 @@ figure.host_desc {
         }
         figcaption {
             font-size: 5vw;
-            color: #aaa
+            color: $color-sec_host--figcaption;
         }
         p {
             font-size: 4vw;
@@ -108,21 +110,26 @@ figure.host_desc {
 
 @media screen and (min-width: 768px) {
     .rules_title,
-    .award_link {
+    .award_link,
+    .winner_link {
         position: absolute;
         left: 5%;
     }
     .sec_award .award_link {
         font-size: 3em;
     }
+    .sec_winner .winner_link {
+        font-size: 3em;
+    }
     .sec_rules figure {
-        background: #555;
-        color: #eee;
+        background: $color-sec_rules--figure--bg;
+        color: $color-sec_rules--figure;
         margin-left: 30%;
         padding: 10px 40px 100px;
-        box-shadow: 2px 0 5px #000;
+        box-shadow: 2px 0 5px $color-sec_rules--figure--shadow;
     }
-    .sec_award figure {
+    .sec_award figure,
+    .sec_winner figure {
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;

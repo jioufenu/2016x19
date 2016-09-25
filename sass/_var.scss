@@ -1,0 +1,27 @@
+// colors-----------------------
+// _base
+$color-bg: #EEE;
+$color-selection: #FFDB71;
+$color-selection--bg: transparent;
+$color-selection--shadow: #000;
+$color-link--border: #888;
+$color-link--hover--border:#fff;
+// _layout
+$color-sec_host:#EEE;
+$color-sec_host--bg:#555;
+$color-sec_rules--figure: #EEE;
+$color-sec_rules--figure--bg:#555;
+$color-sec_rules--figure--shadow: #000;
+$color-sec_host--figcaption: #aaa;
+// fonts------------------------
+$font-list:"Arimo",
+"Georgia",
+"Xin Gothic",
+"Hiragino Sans GB",
+"Droid Sans Fallback",
+"Microsoft YaHei",
+sans-serif;
+// 
+%text-center {
+    text-align: center;
+}

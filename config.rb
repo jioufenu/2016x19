@@ -8,7 +8,7 @@ sass_dir = "sass"
 images_dir = "img"
 javascripts_dir = "js"
 output_style = :compressed
-sourcemap = true
+# sourcemap = true
 cache = false
 Encoding.default_external = "utf-8"
 
