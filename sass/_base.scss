@@ -9,6 +9,10 @@
     text-shadow: 1px 1px 1px $color-selection--shadow;
 }
 
+img{
+    max-width: 100%;
+}
+
 body {
     font: 400 16px/1.62 $font-list;
     background: $color-bg;
