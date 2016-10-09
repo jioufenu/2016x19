@@ -25,8 +25,24 @@
 </head>
 
 <body>
+    <!-- #fb-share -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- /#fb-share -->
     <main id="fullpage">
         <section class="section sec_header">
+            <!-- fb-share -->
+            <div style="position:fixed;top:5px;right:5px" class="fb-share-button" data-href="https://jioufenu.github.io/2016x19/" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjioufenu.github.io%2F2016x19%2F&amp;src=sdkpreparse">分享</a></div>
+            <!-- /.fb-share -->
             <div class="container">
                 <div class="header_title">
                     <h1>2016年 x19全球華文詩獎</h1>
@@ -51,6 +67,11 @@
                     </div>
                 </div>
             </div>
+            <svg class="scroll_down">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
         </section>
         <section class="section sec_winner">
             <div class="container">
